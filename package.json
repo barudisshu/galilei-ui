@@ -4,11 +4,11 @@
   "description": "Bootstrapping a UI component library",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production && ls ./docs",
-    "tslint": "./node_modules/.bin/tslint -c tslint.yml 'src/**/*.{ts,tsx}'",
+    "start": "./node_modules/.bin/parcel src/docs/index.html",
+    "build": "./node_modules/.bin/webpack --mode=production",
     "build:docs":
-      "webpack src/docs/index.js -d ./dist/docs && cp src/docs/index.html dist/docs/index.html"
+    "./node_modules/.bin/parcel build src/docs/index.js -d ./dist/docs && cp src/docs/index.html dist/docs/index.html",
+    "tslint": "./node_modules/.bin/tslint -c tslint.yml 'src/**/*.{ts,tsx}'"
   },
   "author": "Galudisu@gmail.com",
   "license": "MIT",
@@ -67,6 +67,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.11.0",
     "eslint": "^5.12.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-react": "^7.12.3",

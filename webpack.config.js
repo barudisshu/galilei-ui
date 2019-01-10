@@ -1,6 +1,5 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, './src/lib/index.js'),
@@ -35,11 +34,5 @@ module.exports = {
         options: {minimize: true}
       }
     ]
-  },
-  plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/docs/index.html",
-      filename: "./index.html"
-    })
-  ]
+  }
 };

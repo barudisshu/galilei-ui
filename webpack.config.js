@@ -1,5 +1,5 @@
-const path = require('path');
-const nodeExternals = require('webpack-node-externals');
+const path = require('path')
+const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
   entry: path.resolve(__dirname, './src/lib/index.js'),
@@ -30,7 +30,7 @@ module.exports = {
       },
       {
         test:/\.html$/,
-        loader: "html-loader",
+        loader: 'html-loader',
         options: {minimize: true}
       }
     ]

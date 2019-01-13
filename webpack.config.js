@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+var ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   output: {
@@ -16,11 +17,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'],
+          presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+          cacheDirectory: true,
+          plugins: [
+            ['@babel/plugin-proposal-decorators', { legacy: true }],
+            ['@babel/plugin-proposal-class-properties', { loose: true }],
+            'react-hot-loader/babel',
+          ],
         },
       },
       {
@@ -43,5 +50,6 @@ module.exports = {
       template: './src/docs/index.html',
       filename: './index.html',
     }),
+    new ForkTsCheckerWebpackPlugin()
   ],
 };

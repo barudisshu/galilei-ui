@@ -1,11 +1,11 @@
 // MLink.react.test.js
 import React from 'react';
-import Link from '../Link.react';
+import MLink from '../Link.react';
 import renderer from 'react-test-renderer';
 
 test('MLink changes the class when hovered', () => {
   const component = renderer.create(
-    <Link page="http://www.facebook.com">Facebook</Link>,
+    <MLink page="http://www.facebook.com">Facebook</MLink>,
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();

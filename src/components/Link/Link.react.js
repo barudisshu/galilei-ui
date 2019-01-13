@@ -6,7 +6,7 @@ const STATUS = {
   NORMAL: 'normal',
 };
 
-export class MLink extends React.Component {
+export default class MLink extends React.Component {
   constructor(props) {
     super(props);
 

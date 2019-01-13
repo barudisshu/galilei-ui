@@ -23,6 +23,7 @@ coverage
 
 # nyc test coverage
 .nyc_output
+__test__
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
@@ -59,6 +60,7 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
+yarn.lock
 
 # yarn log
 .yarn-error.log

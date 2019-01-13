@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export class Button extends React.Component {
   constructor(props) {
@@ -11,3 +12,7 @@ export class Button extends React.Component {
     );
   }
 }
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+};

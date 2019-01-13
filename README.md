@@ -1,6 +1,6 @@
 # GalileiUI
 
-Example on how to build your own UI components library and showcase it in the same code structure. Check the medium article.
+Galilei UI components library and showcase it in the same code structure. Check the medium article.
 
 ## Getting Started
 
@@ -18,18 +18,18 @@ To build the library:
 
 To build the docs:
 
-`yarn build:docs`
+`yarn storybook`
 
 ## Running
 
-To start the documentation where you can show case the elements from lib:
+To start the documentation where you can show case the elements from components:
 
 `yarn start`
 
 ## Built With
 
 * [Webpack 4](https://webpack.js.org/) - For building the library
-* [Parcel Bundler](https://parceljs.org/) - For building the docs
+* [Storybook](https://storybook.js.org/) - For building the docs
 * React
 
 ## Contributing
@@ -38,7 +38,7 @@ All PR's are welcome.
 
 ## Authors
 
-* **Pedro Madruga** - [twitter](https://twitter.com/thepedromadruga)
+* **Galudisu** - [blog](http://galudisu.info)
 
 ## License
 

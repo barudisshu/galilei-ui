@@ -2,6 +2,7 @@ env:
   browser: true
   commonjs: true
   es6: true
+  jest: true
 ecmaFeatures:
   modules: true
   spread: true
@@ -33,6 +34,7 @@ rules:
   no-unused-vars: warn
   no-console: error
   no-unexpected-multiline: warn
+  import/prefer-default-export: off
 settings:
   react:
     pragma: React

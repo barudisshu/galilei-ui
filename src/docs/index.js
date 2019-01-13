@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from '../lib/Button';
+import { Button } from '@material-ui/core';
 
 const App = () => (
   <div>
     <h1>Galilei UI</h1>
     <h2>Button</h2>
-    <p>Here's an example of button.</p>
-    <Button text="Click me!" />
+    <p>Here&apos;s an example of button.</p>
+    <Button variant="contained" color="primary">
+      Hello World
+    </Button>
   </div>
 );
 

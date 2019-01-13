@@ -1,14 +1,19 @@
 {
   "compilerOptions": {
     "outDir": "build/dist",
-    "module": "esnext",
+    "module": "umd",
     "target": "es5",
     "lib": ["es6", "dom"],
     "sourceMap": true,
     "allowJs": true,
     "jsx": "react",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "allowUnreachableCode": true,
     "moduleResolution": "node",
-    "rootDir": "src",
+    "rootDir": "src/docs",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -18,8 +23,11 @@
     "noUnusedLocals": true,
     "allowSyntheticDefaultImports": true
   },
+  "include": ["src/**/*"],
   "exclude": [
     "node_modules",
+    "typings/browser",
+    "typings/browser.d.ts",
     "build",
     "scripts",
     "acceptance-tests",

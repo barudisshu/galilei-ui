@@ -1,15 +1,15 @@
 import { withInfo } from '@storybook/addon-info';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
-import {Button} from '../lib';
-import button from './button.md';
+import { MForm } from '../../components';
+import form from './form.md';
 
-storiesOf('Button', module)
+storiesOf('Form', module)
   .add('基本用法',
     withInfo({
       inline: true,
-      markdown: button
+      markdown: form,
     })(() =>
-      <Button>测试按钮</Button>
+      <MForm/>,
     ),
   );

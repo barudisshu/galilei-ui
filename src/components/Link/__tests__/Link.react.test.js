@@ -1,6 +1,6 @@
 // MLink.react.test.js
 import React from 'react';
-import MLink from '../Link.react';
+import { MLink } from '../Link.react';
 import renderer from 'react-test-renderer';
 
 test('MLink changes the class when hovered', () => {

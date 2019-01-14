@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-var ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   output: {
@@ -11,13 +11,13 @@ module.exports = {
   },
   entry: './src/docs/index.js',
   devServer: {
-    contentBase: path.resolve(__dirname, './src/docs/index.html'),
+    contentBase: path.resolve(__dirname, './public'),
     port: 3000,
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|ts|jsx|tsx)?$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         options: {
@@ -35,19 +35,30 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'less-loader'],
       },
       {
+        test: /\.scss$/,
+        exclude: /(node_modules)/,
+        loader: 'style-loader!css-loader?importLoaders=2!postcss-loader!sass-loader',
+      },
+      {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        exclude: /(node_modules)/,
+        loader: 'style-loader!css-loader?importLoaders=1!postcss-loader',
       },
       {
         test: /\.html$/,
         loader: 'html-loader',
         options: { minimize: true },
       },
+      {
+        test: /\.(png|gif|jpg|svg)$/,
+        exclude: /(node_modules)/,
+        loader: 'url-loader',
+      },
     ],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './src/docs/index.html',
+      template: './public/index.html',
       filename: './index.html',
     }),
     new ForkTsCheckerWebpackPlugin()

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from '@material-ui/core';
+import { Button } from '../components';
 import { hot } from 'react-hot-loader/root';
 
 const App = () => (
@@ -8,9 +8,7 @@ const App = () => (
     <h1>Galilei UI</h1>
     <h2>Button</h2>
     <p>Here&apos;s an example of button.</p>
-    <Button variant="contained" color="primary">
-      Hello World
-    </Button>
+    <Button> Hello World </Button>
   </div>
 );
 
